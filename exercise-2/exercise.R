@@ -37,10 +37,11 @@ salaries[57, 3]
 
 
 # How many employees got a raise?
-print(length(salaries[5] == TRUE))
+length(salaries[salaries == TRUE])
 
 
 # What was the dollar value of the highest raise?
+print(max(salaries$change))
 
 
 # What was the "name" of the employee who received the highest raise?
