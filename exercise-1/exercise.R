@@ -24,7 +24,7 @@ games$won <- scored_points > lost_points
   # wut?
 
 # Assign your dataframe rownames of their opponents
-
+  # can't understand request
 
 # View your data frame to see how it has changed!
 
