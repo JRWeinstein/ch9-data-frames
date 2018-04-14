@@ -41,26 +41,25 @@ length(salaries[salaries == TRUE])
 
 
 # What was the dollar value of the highest raise?
-print(max(salaries$change))
-
+highest_raise <- max(salaries$change)
 
 # What was the "name" of the employee who received the highest raise?
-
+person_highest_raise <- salaries$employees[salaries$change == highest_raise]
 
 # What was the largest decrease in salaries between the two years?
-
+biggest_paycut <- min(salaries$change)
 
 # What was the name of the employee who recieved largest decrease in salary?
-
+got_biggest_paycut <- salaries[salaries$change == biggest_paycut, "employees"]
 
 # What was the average salary change?
-
+avg_change <- mean(salaries$change)
 
 # For people who did not get a raise, how much money did they lose on average?
-
+avg_loss <- mean(subset(salaries, salaries$change < 0))
 
 ## Consider: do the above averages match what you expected them to be based on 
 ## how you generated the salaries?
 
 # Write a .csv file of your salary data to your working directory
-
+write.csv(avg_loss, "salary_data.csv")
